@@ -6,6 +6,8 @@ import { monitor } from "@colyseus/monitor";
  */
 import { MyRoom } from "./rooms/MyRoom.js";
 
+import { MyRoom2} from "./rooms/MyRoom2.js"
+
 export default config.default({
 
     initializeGameServer: (gameServer) => {
@@ -13,6 +15,7 @@ export default config.default({
          * Define your room handlers:
          */
         gameServer.define('my_room', MyRoom);
+        gameServer.define('my_room2', MyRoom2);
     },
 
     initializeExpress: (app) => {
